@@ -2,3 +2,5 @@
 .Rhistory
 *.png
 mycred.R
+*.R~
+
