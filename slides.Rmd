@@ -49,12 +49,12 @@ https://www.rstudio.com/products/rstudio/download/#download
   öffnen oder ein Skript kompilieren. So ziemlich alles ist aber auch
   per Skript möglich.
 
-## Demo RStudio UI
+## Demo/hands-on RStudio UI
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='https://www.rstudio.com/wp-content/uploads/2018/08/rstudio-ide.png'}
 knitr::include_graphics('rstudio-ide_part.png')
 ```
 
-## Demo R Basics
+## Demo/hands-on R Basics
 ```{r}
 a <- 1; b <- 2
 print(a+b)
@@ -89,12 +89,12 @@ str(data)
 - Long-to-Wide und Wide-to-Long Transformationen
 - Codebook erstellen mit dem `codebook` Package
 
-## Demo ANOVA/ANCOVA und lineare Regression
+## Demo/hands-on ANOVA/ANCOVA und lineare Regression
 
-## Demo R Markdown/bookdown/pagedown
+## Demo/hands-on R Markdown/bookdown/pagedown
 
-## Demo lme4
+## Demo/hands-on lme4
 
-## Demo lavaan
+## Demo/hands-on lavaan
 
-## Demo ggplot2
+## Demo/hands-on ggplot2
