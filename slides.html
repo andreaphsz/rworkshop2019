@@ -497,39 +497,62 @@ Linux: <a href="https://stat.ethz.ch/CRAN/bin/linux/" class="uri">https://stat.e
 <pre><code>## [1] 1 2 3</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b=</span><span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="kw">print</span>(df)</span></code></pre></div>
-<pre><code>##   a           b
-## 1 1 -0.01892939
-## 2 2  0.09317629
-## 3 3  0.33068057
-## 4 4 -0.87090940
-## 5 5  1.05276745</code></pre>
+<pre><code>##   a          b
+## 1 1 -0.4765161
+## 2 2  2.3034555
+## 3 3 -0.6924810
+## 4 4 -0.2212735
+## 5 5  0.9880438</code></pre>
 <ul>
 <li>Live Demo: colSums, rowSums, lapply, function, plot, hist, boxplot, factor, str, head, names, …</li>
 </ul>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>, <span class="dt">b=</span><span class="kw">round</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">1</span>),<span class="dv">2</span>), <span class="dt">g=</span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">each=</span><span class="dv">25</span>))</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="kw">head</span>(data)</span></code></pre></div>
 <pre><code>##   a     b g
-## 1 1 -0.84 1
-## 2 2  1.09 1
-## 3 3  2.95 1
-## 4 4  0.14 1
-## 5 5 -1.03 1
-## 6 6  0.27 1</code></pre>
+## 1 1 -1.06 1
+## 2 2  0.13 1
+## 3 3 -0.94 1
+## 4 4 -1.45 1
+## 5 5 -0.51 1
+## 6 6  0.32 1</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">str</span>(data)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    100 obs. of  3 variables:
 ##  $ a: int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ b: num  -0.84 1.09 2.95 0.14 -1.03 0.27 -0.21 -0.09 -0.36 0.34 ...
+##  $ b: num  -1.06 0.13 -0.94 -1.45 -0.51 0.32 -0.85 0.3 -0.84 1.62 ...
 ##  $ g: int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
 </div>
 <div id="konzepte-r-corebase-vs.-tidyverse" class="slide section level2">
 <h1>Konzepte R core/base vs. tidyverse</h1>
-<ul>
-<li><code>data.frame</code> vs. <code>tibble</code></li>
-<li><code>df[rows, cols]</code> vs. <code>dplyr::select</code> / <code>dplyr::filter</code></li>
-<li><code>df$neu</code> vs. <code>dplyr::mutate</code></li>
-<li><code>aggregate</code> vs. <code>dplyr::group_by</code> / <code>dplyr::summarise</code></li>
-<li><code>merge</code> vs. <code>dplyr::left_join</code></li>
-</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">core/base</th>
+<th align="left">tidyverse/dplyr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>data.frame</code></td>
+<td align="left"><code>tibble</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>df[rows, cols]</code></td>
+<td align="left"><code>select</code> / <code>filter</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>df$neu</code></td>
+<td align="left"><code>mutate</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>aggregate</code></td>
+<td align="left"><code>group_by</code> / <code>summarise</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>merge</code></td>
+<td align="left"><code>left_join</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="r-script-zum-lesen-und-transformieren-von-daten" class="slide section level2">
 <h1>R-Script zum Lesen und Transformieren von Daten</h1>

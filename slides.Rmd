@@ -73,11 +73,13 @@ str(data)
 ```
 
 ## Konzepte R core/base vs. tidyverse
-- `data.frame` vs. `tibble`
-- `df[rows, cols]` vs. `dplyr::select` / `dplyr::filter`
-- `df$neu` vs. `dplyr::mutate`
-- `aggregate` vs. `dplyr::group_by` / `dplyr::summarise`
-- `merge` vs. `dplyr::left_join`
+|core/base|tidyverse/dplyr|
+|:--------|:--------|
+|`data.frame`| `tibble` |
+| `df[rows, cols]` | `select` / `filter`|
+| `df$neu` | `mutate`|
+| `aggregate` | `group_by` / `summarise`|
+| `merge` | `left_join`|
 
 
 ## R-Script zum Lesen und Transformieren von Daten
