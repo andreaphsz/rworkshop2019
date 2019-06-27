@@ -83,13 +83,13 @@ str(data)
 | `merge` | `left_join`|
 
 
-## R-Script zum Lesen und Transformieren von Daten
-- Lesen von Daten aus einer SPSS-Datei mit dem `haven` Package
-- Lesen von Daten aus einer Excel-Datei mit dem `readxl` Package
-- Long-to-Wide und Wide-to-Long Transformationen
+## Demo Einlesen/Importieren und Transformieren von Daten
+- Einlesen von Daten aus einer SPSS-Datei mit dem `haven` Package
+- Einlesen von Daten aus einer Excel-Datei mit dem `readxl` Package
+- long-to-wide und wide-to-long Transformationen
 - Codebook erstellen mit dem `codebook` Package
 
-## Demo/Hands-on ANOVA/ANCOVA und lineare Regression
+## Demo/Hands-on ANOVA/ANCOVA und Lineare Regression
 
 ## Demo/Hands-on R Markdown/bookdown/pagedown
 
