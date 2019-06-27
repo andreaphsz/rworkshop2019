@@ -1,8 +1,8 @@
 source("mycred.R")
 
 rmarkdown::render("slides.Rmd")
-message("commit")
+message("\rcommiting...")
 git2r::commit(message="dev", all=TRUE)
-message("push")
+message("pushing...")
 git2r::push(credentials=cred)
-message("finished")
+message("finished!")
