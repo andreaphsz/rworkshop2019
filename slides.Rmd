@@ -69,7 +69,7 @@ print(df)
 ```{r}
 data <- data.frame(a=1:100, b=round(rnorm(100, 0, 1),2), g=rep(1:4, each=25))
 head(data)
-
+str(data)
 ```
 
 ## Konzepte R core/base vs. tidyverse
