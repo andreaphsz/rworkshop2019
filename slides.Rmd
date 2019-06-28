@@ -161,3 +161,11 @@ library(lavaan)
 ```{r}
 library(ggplot2)
 ```
+
+## Nützliche Links
+- [rseek.org](https://rseek.org/)
+- [CRAN task views](https://cran.r-project.org/web/views/)
+- [R for Data Science](https://r4ds.had.co.nz/)
+- [RStudio Webinars](https://resources.rstudio.com/webinars)
+- [R Package Documentation](https://rdrr.io/)
+- [Zürcher R Kurse](https://www.zhrcourses.uzh.ch/)
