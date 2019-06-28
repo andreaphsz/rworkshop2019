@@ -7,6 +7,54 @@ output:
     footer: "Try C, F, A, S, B"
 ---
 
+## Inhalt
+
+<!-- Script for adding ToC !-->
+<!-- modification of https://stackoverflow.com/a/50569838 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	TableOfContents();
+});
+	
+function TableOfContents(container, output) {
+	
+	var output = output || '#toc';
+	// Get all elements with class: section or subsection
+	idfromclass = document.querySelectorAll('.section>h1, .subsection>h2');
+
+    // Create the list element:
+    var list = document.createElement('ul');
+
+    // Iterate through all found elements
+	for(var i = 0; i < idfromclass.length; i++) {
+
+	// Create the list item:
+	var item = document.createElement('li');
+
+	// get Title Text
+	var titleText = idfromclass[i].innerText
+	if (titleText=="Inhalt") continue
+
+	// Add text to list element
+	item.appendChild(document.createTextNode(titleText));
+
+	// Add subsection class
+	item.className = idfromclass[i].className
+
+	// Add it to the list:
+	list.appendChild(item);
+	}
+
+	// Return generated HTML to toc div in slide
+	document.querySelector(output).innerHTML = list.innerHTML;
+
+	// Generate instruction message if no classes are defined
+	if (idfromclass.length == 0) { document.querySelector(output).innerHTML = "Add {.section} or {.subsection} to slide name to generate TOC"; }
+};
+</script>
+
+<div id="toc"></div>
+
 
 ## Voraussetzungen
 - Auf dem eigenen Laptop installiertes und lauffähiges aktuell(st)es R  
@@ -19,17 +67,6 @@ RStudio
 https://www.rstudio.com/products/rstudio/download/#download
 
 
-## Inhalt
-- Warum R, und nicht SPSS/Mplus oder Python/Julia?
-- Warum RStudio, und nicht R-GUI oder Emacs?
-- Demo RStudio UI
-- Demo R Basics
-- Konzepte R core/base vs. tidyverse
-- R-Script zum Laden und Transformieren von Daten
-- Demo R-Markdown/bookdown/pagedown
-- Demo ANOVA/ANCOVA
-- Demo lavaan
-- Demo ggplot2
 
 ## Warum R, und nicht SPSS/Mplus oder Python/Julia?
 - R ist eine Statistik-_Programmiersprache_
@@ -84,12 +121,19 @@ str(data)
 
 
 ## Demo Einlesen/Importieren und Transformieren von Daten
+- Download von pisa2012che als SPSS-Datei
+
+- Download von pisa2012che als Excel-Datei 
+
 - Einlesen von Daten aus einer SPSS-Datei mit dem `haven` Package
 - Einlesen von Daten aus einer Excel-Datei mit dem `readxl` Package
 - long-to-wide und wide-to-long Transformationen
 - Codebook erstellen mit dem `codebook` Package
 
 ## Demo/Hands-on ANOVA/ANCOVA und Lineare Regression
+- ANOVA/ANCOVA ist Lineare Regression
+  (http://rpubs.com/candrea/anova-is-regression)
+  
 
 ## Demo/Hands-on R Markdown/bookdown/pagedown
 
