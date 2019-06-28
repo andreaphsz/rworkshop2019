@@ -4,7 +4,7 @@ author: Andrea Cantieni
 date:  19.8.19
 output: 
   slidy_presentation:
-    footer: "Try C, F, A, S, B"
+    footer: "Use C, F, A, S, B"
 ---
 
 ## Inhalt
@@ -108,6 +108,7 @@ print(df)
 data <- data.frame(a=1:100, b=round(rnorm(100, 0, 1),2), g=rep(1:4, each=25))
 head(data)
 str(data)
+names(data)
 ```
 
 ## Konzepte R core/base vs. tidyverse
@@ -120,25 +121,43 @@ str(data)
 | `merge` | `left_join`|
 
 
-## Demo Einlesen/Importieren und Transformieren von Daten
-- Download von pisa2012che als SPSS-Datei
+## Demo/Hands-on Einlesen/Importieren und Dokumentieren von Daten
+- Download des `pisa2012che.sav` Datensatzes als SPSS-Datei  
+https://andreaphsz.github.io/rworkshop2019/pisa2012che.sav
 
-- Download von pisa2012che als Excel-Datei 
+- Download des `pisa2012che.xlsx` Datensatzes als Excel-Datei  
+https://andreaphsz.github.io/rworkshop2019/pisa2012che.xlsx
 
-- Einlesen von Daten aus einer SPSS-Datei mit dem `haven` Package
-- Einlesen von Daten aus einer Excel-Datei mit dem `readxl` Package
-- long-to-wide und wide-to-long Transformationen
-- Codebook erstellen mit dem `codebook` Package
+- Einlesen der `pisa2012che.sav` SPSS-Datei mit dem `haven` Package  
+https://cran.r-project.org/package=haven
+
+- Einlesen der `pisa2012che.xlsx` Excel-Datei mit dem `readxl` Package  
+https://cran.r-project.org/package=readxl
+  
+- Codebook erstellen mit dem `codebook` Package  
+https://cran.r-project.org/package=codebook
+
 
 ## Demo/Hands-on ANOVA/ANCOVA und Lineare Regression
 - ANOVA/ANCOVA ist Lineare Regression
   (http://rpubs.com/candrea/anova-is-regression)
-  
+- `aov`, `lm`, `summary`
+- Berechnungen mit dem `pisa2012che` Datensatz
 
 ## Demo/Hands-on R Markdown/bookdown/pagedown
+- Demo in RStudio
 
 ## Demo/Hands-on lme4
+```{r}
+library(lme4)
+```
 
 ## Demo/Hands-on lavaan
+```{r}
+library(lavaan)
+```
 
 ## Demo/Hands-on ggplot2
+```{r}
+library(ggplot2)
+```
