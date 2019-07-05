@@ -148,11 +148,19 @@ https://cran.r-project.org/package=codebook
 - Demo in RStudio
 
 ## Demo/Hands-on lme4
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
+knitr::include_graphics('lmer_formula.png')
+```
+
 ```{r}
 library(lme4)
 ```
 
 ## Demo/Hands-on lavaan
+```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
+knitr::include_graphics('lavaan_formula.png')
+```
+
 ```{r}
 library(lavaan)
 ```
