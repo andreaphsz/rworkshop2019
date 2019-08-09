@@ -1,7 +1,7 @@
 ---
 title: "R Workshop an der PHSZ"
 author: Andrea Cantieni
-date:  19.8.19
+date:  19.8.19 <br><br> 13:00 - 17:30 <br><br> Raum P01
 output: 
   slidy_presentation:
     footer: "Use C, F, A, S, B"
@@ -122,8 +122,18 @@ names(data)
 | `aggregate` | `group_by` / `summarise`|
 | `merge` | `left_join`|
 
+## pisa2012che Datensatz
+
+- Beschreibung des Datensatzes unter
+  [pisa2012che](https://rdrr.io/cran/betas/man/pisa2012che.html)
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
+knitr::include_graphics('pisa2012che.png')
+```
+  
 
 ## Demo/Hands-on Einlesen/Importieren und Dokumentieren von Daten
+
 - Download des `pisa2012che.sav` Datensatzes als SPSS-Datei  
 https://andreaphsz.github.io/rworkshop2019/pisa2012che.sav
 
@@ -162,6 +172,8 @@ knitr::include_graphics('lmer_formula.png')
 library(lme4)
 ```
 
+- Z.B. Zwei-Level-Modell mit dem `pisa2012che` Datensatz
+
 ## Demo/Hands-on lavaan
 ```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
 knitr::include_graphics('lavaan_formula.png')
@@ -171,11 +183,13 @@ knitr::include_graphics('lavaan_formula.png')
 library(lavaan)
 ```
 
+- Z.B. Pfadmodell mit dem `pisa2012che` Datensatz
+
 ## Demo/Hands-on ggplot2
 ```{r}
 library(ggplot2)
 ```
-- Erster Schritt: Verwendung des RStudio Addins <'ggplot2' builder>
+- Erster Schritt: Verwendung des RStudio Addins «'ggplot2' builder»
   [esquisse:::esquisser()]
   
 
