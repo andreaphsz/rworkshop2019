@@ -6,10 +6,10 @@ output:
   slidy_presentation:
     footer: "Use C, F, A, S, B"
 ---
-<!-- render with rmarkdown::render("slides.Rmd") -->
-<!-- render and push to github with source("renderpush.R") -->
 
 ## Inhalt
+<!-- render with rmarkdown::render("slides.Rmd") -->
+<!-- render and push to github with source("renderpush.R") -->
 
 <!-- Script for adding ToC !-->
 <!-- modification of https://stackoverflow.com/a/50569838 -->
