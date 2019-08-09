@@ -148,6 +148,10 @@ https://cran.r-project.org/package=codebook
 
 ## Demo/Hands-on R Markdown/bookdown/pagedown
 - Demo in RStudio
+- [R Markdown](https://rmarkdown.rstudio.com/lesson-8.html)
+- [bookdown](https://bookdown.org/yihui/bookdown/)
+- [pagedown](https://pagedown.rbind.io/)
+
 
 ## Demo/Hands-on lme4
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
