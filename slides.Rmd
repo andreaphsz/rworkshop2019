@@ -6,6 +6,8 @@ output:
   slidy_presentation:
     footer: "Use C, F, A, S, B"
 ---
+<!-- render with rmarkdown::render("slides.Rmd") -->
+<!-- render and push to github with source("renderpush.R") -->
 
 ## Inhalt
 
@@ -169,6 +171,9 @@ library(lavaan)
 ```{r}
 library(ggplot2)
 ```
+- Erster Schritt: Verwendung des RStudio Addins <'ggplot2' builder>
+  [esquisse:::esquisser()]
+  
 
 ## Nützliche Links
 - [rseek.org](https://rseek.org/)

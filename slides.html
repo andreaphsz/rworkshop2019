@@ -434,6 +434,11 @@ Andrea Cantieni
   </p>
   <p class="date">19.8.19</p>
 </div>
+<div class="slide section level2">
+
+<!-- render with rmarkdown::render("slides.Rmd") -->
+<!-- render and push to github with source("renderpush.R") -->
+</div>
 <div id="inhalt" class="slide section level2">
 <h1>Inhalt</h1>
 <!-- Script for adding ToC !-->
@@ -531,28 +536,28 @@ Linux: <a href="https://stat.ethz.ch/CRAN/bin/linux/" class="uri">https://stat.e
 <pre><code>## [1] 1 2 3</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b=</span><span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="kw">print</span>(df)</span></code></pre></div>
-<pre><code>##   a          b
-## 1 1  0.5926464
-## 2 2  0.3356824
-## 3 3  0.8159104
-## 4 4 -0.7573807
-## 5 5  1.0367679</code></pre>
+<pre><code>##   a           b
+## 1 1  0.93368051
+## 2 2  1.34168143
+## 3 3 -0.62264986
+## 4 4 -0.03655511
+## 5 5  0.49057049</code></pre>
 <ul>
 <li>Live Demo: colSums, rowSums, lapply, function, plot, hist, boxplot, factor, str, head, names, …</li>
 </ul>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>, <span class="dt">b=</span><span class="kw">round</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">1</span>),<span class="dv">2</span>), <span class="dt">g=</span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">each=</span><span class="dv">25</span>))</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="kw">head</span>(data)</span></code></pre></div>
 <pre><code>##   a     b g
-## 1 1  1.01 1
-## 2 2  0.73 1
-## 3 3  0.06 1
-## 4 4  2.19 1
-## 5 5 -0.32 1
-## 6 6 -0.67 1</code></pre>
+## 1 1 -0.16 1
+## 2 2  0.71 1
+## 3 3 -0.19 1
+## 4 4 -0.26 1
+## 5 5 -0.26 1
+## 6 6  0.02 1</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">str</span>(data)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    100 obs. of  3 variables:
 ##  $ a: int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ b: num  1.01 0.73 0.06 2.19 -0.32 -0.67 0.57 1.7 0.02 0.34 ...
+##  $ b: num  -0.16 0.71 -0.19 -0.26 -0.26 0.02 0 0.09 2.23 -0.4 ...
 ##  $ g: int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">names</span>(data)</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;g&quot;</code></pre>
@@ -632,6 +637,9 @@ Linux: <a href="https://stat.ethz.ch/CRAN/bin/linux/" class="uri">https://stat.e
 <div id="demohands-on-ggplot2" class="slide section level2">
 <h1>Demo/Hands-on ggplot2</h1>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+<ul>
+<li>Erster Schritt: Verwendung des RStudio Addins &lt;‘ggplot2’ builder&gt; [esquisse:::esquisser()]</li>
+</ul>
 </div>
 <div id="nutzliche-links" class="slide section level2">
 <h1>Nützliche Links</h1>
