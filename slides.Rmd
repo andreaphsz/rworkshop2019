@@ -88,17 +88,18 @@ https://www.rstudio.com/products/rstudio/download/#download
   öffnen oder ein Skript kompilieren. So ziemlich alles ist aber auch
   per Skript möglich.
 
-## Demo/Hands-on RStudio UI
+## Demo/Hands-on: RStudio UI
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='https://www.rstudio.com/wp-content/uploads/2018/08/rstudio-ide.png'}
 knitr::include_graphics('rstudio-ide_part.png')
 ```
 
-## Demo/Hands-on R Basics
+## Demo/Hands-on: R Basics
 ```{r}
 a <- 1; b <- 2
 print(a+b)
 d <- c(a, b, a+b)
 print(d)
+#set.seed(19819)
 df <- data.frame(a=1:5, b=rnorm(5, 0, 1))
 print(df)
 
@@ -107,20 +108,32 @@ print(df)
   str, head, names, ...
 
 ```{r}
-data <- data.frame(a=1:100, b=round(rnorm(100, 0, 1),2), g=rep(1:4, each=25))
-head(data)
-str(data)
-names(data)
+set.seed(19819)
+mydata <- data.frame(a=1:100, b=round(rnorm(100, 0, 1),2), g=rep(1:4, each=25))
+head(mydata)
+str(mydata)
+names(mydata)
 ```
 
 ## Konzepte R core/base vs. tidyverse
+- R
+  [core/base](https://stat.ethz.ch/R-manual/R-patched/doc/html/packages.html)
+  ist das "Fundament",
+  [tidyverse](https://www.tidyverse.org/packages/) baut darauf auf.
+  
 |core/base|tidyverse/dplyr|
 |:--------|:--------|
-|`data.frame`| `tibble` |
+|`data.frame`| [`tibble`](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html) |
 | `df[rows, cols]` | `select` / `filter`|
 | `df$neu` | `mutate`|
 | `aggregate` | `group_by` / `summarise`|
 | `merge` | `left_join`|
+
+- Demo: Anwendung der Methoden auf `mydata`
+```r
+class(mydata)
+
+```
 
 ## pisa2012che Datensatz
 
@@ -132,7 +145,7 @@ knitr::include_graphics('pisa2012che.png')
 ```
   
 
-## Demo/Hands-on Einlesen/Importieren und Dokumentieren von Daten
+## Demo/Hands-on: Einlesen/Importieren und Dokumentieren von Daten
 
 - Download des `pisa2012che.sav` Datensatzes als SPSS-Datei  
 https://andreaphsz.github.io/rworkshop2019/pisa2012che.sav
@@ -150,20 +163,22 @@ https://cran.r-project.org/package=readxl
 https://cran.r-project.org/package=codebook
 
 
-## Demo/Hands-on ANOVA/ANCOVA und Lineare Regression
-- ANOVA/ANCOVA ist Lineare Regression
+## Demo/Hands-on: ANOVA/ANCOVA und lineare Regression
+- ANOVA/ANCOVA ist lineare Regression
   (http://rpubs.com/candrea/anova-is-regression)
-- `aov`, `lm`, `summary`
+- `anova`, `lm`, `summary`
 - Berechnungen mit dem `pisa2012che` Datensatz
 
-## Demo/Hands-on R Markdown/bookdown/pagedown
-- Demo in RStudio
-- [R Markdown](https://rmarkdown.rstudio.com/lesson-8.html)
-- [bookdown](https://bookdown.org/yihui/bookdown/)
-- [pagedown](https://pagedown.rbind.io/)
+## Demo/Hands-on: R Markdown/bookdown/pagedown
+- Dokumentation:
+[R Markdown](https://rmarkdown.rstudio.com/lesson-8.html),
+[bookdown](https://bookdown.org/yihui/bookdown/),
+[pagedown](https://pagedown.rbind.io/)
+
+- Demo in RStudio: File &rarr; New File &rarr; R Markdown...
 
 
-## Demo/Hands-on lme4
+## Demo/Hands-on: lme4
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
 knitr::include_graphics('lmer_formula.png')
 ```
@@ -174,7 +189,7 @@ library(lme4)
 
 - Z.B. Zwei-Level-Modell mit dem `pisa2012che` Datensatz
 
-## Demo/Hands-on lavaan
+## Demo/Hands-on: lavaan
 ```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
 knitr::include_graphics('lavaan_formula.png')
 ```
@@ -185,7 +200,7 @@ library(lavaan)
 
 - Z.B. Pfadmodell mit dem `pisa2012che` Datensatz
 
-## Demo/Hands-on ggplot2
+## Demo/Hands-on: ggplot2
 ```{r}
 library(ggplot2)
 ```
@@ -194,6 +209,7 @@ library(ggplot2)
   
 
 ## Nützliche Links
+- [R Project](https://www.r-project.org/)
 - [rseek.org](https://rseek.org/)
 - [CRAN task views](https://cran.r-project.org/web/views/)
 - [R for Data Science](https://r4ds.had.co.nz/)
