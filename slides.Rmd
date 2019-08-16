@@ -4,7 +4,7 @@ author: Andrea Cantieni
 date:  19.8.19 <br><br> 13:00 - 17:30 <br><br> Raum P01 <br><br> Version `r Sys.time()`
 output: 
   slidy_presentation:
-    footer: "Use C, F, A, S, B, `r Sys.time()`"
+    footer: "Use C, F, A, S, B"
 ---
 
 ## Inhalt
