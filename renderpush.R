@@ -1,6 +1,6 @@
 source("mycred.R")
-
-rmarkdown::render("slides.Rmd")
+footer <- paste0("Use C, F, A, S, B", " | Version ", Sys.time())
+rmarkdown::render("slides.Rmd", rmarkdown::slidy_presentation(footer=footer))
 message("committing...")
 git2r::commit(message="dev", all=TRUE)
 message("pushing...")
