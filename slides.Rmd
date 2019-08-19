@@ -266,7 +266,15 @@ library(ggplot2)
 - Erster Schritt: Verwendung des RStudio Addins «'ggplot2' builder»
   [esquisse:::esquisser()]
   
+```{r}
+ggplot(pisa.xlsx) +
+ aes(x = "", y = MATH, fill = ST04Q01) +
+ geom_boxplot() +
+ scale_fill_hue() +
+ labs(x = "gender", y = "math", title = "test") +
+ theme_gray()
 
+```
 ## Nützliche Links
 - [R Project](https://www.r-project.org/)
 - [rseek.org](https://rseek.org/)
