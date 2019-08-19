@@ -181,18 +181,52 @@ https://andreaphsz.github.io/rworkshop2019/pisa2012che.xlsx
 - Einlesen der `pisa2012che.sav` SPSS-Datei mit dem `haven` Package  
 https://cran.r-project.org/package=haven
 
+```r
+
+library(haven)
+pisa.sav <- read_sav("pisa2012che.sav")
+
+```
+
 - Einlesen der `pisa2012che.xlsx` Excel-Datei mit dem `readxl` Package  
 https://cran.r-project.org/package=readxl
-  
+
+```r
+
+library(readxl)
+pisa.xlsx <- read_xlsx("pisa2012che.xlsx")
+
+```
+
 - Codebook erstellen mit dem `codebook` Package  
 https://cran.r-project.org/package=codebook
 
+```r
+
+library(codebook)
+new_codebook_rmd()
+
+```
 
 ## Demo/Hands-on: ANOVA/ANCOVA und lineare Regression
 - ANOVA/ANCOVA ist lineare Regression
   (http://rpubs.com/candrea/anova-is-regression)
 - `anova`, `lm`, `summary`
 - Berechnungen mit dem `pisa2012che` Datensatz
+
+```r
+
+fit <- lm(MATH ~ ST04Q01, pisa.sav)
+summary(fit)
+summary(pisa.sav)
+anova(fit)
+plot(fit)
+
+fit2 <- lm(MATH ~ ST04Q01 + ESCS, pisa.sav)
+fit3 <- update(fit, . ~ . + ESCS)
+
+
+```
 
 ## Demo/Hands-on: R Markdown/bookdown/pagedown
 - Dokumentation:
