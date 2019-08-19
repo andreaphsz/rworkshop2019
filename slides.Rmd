@@ -5,6 +5,8 @@ date:  19.8.19 <br><br> 13:00 - 17:30 <br><br> Raum P01 <br><br> Version `r Sys.
 output: 
   slidy_presentation:
     footer: "Use C, F, A, S, B"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Inhalt
@@ -96,13 +98,13 @@ knitr::include_graphics('rstudio-ide_part.png')
 ## Demo/Hands-on: R Basics
 ```{r}
 a <- 1; b <- 2
-print(a+b)
+print(a+b)  # ausdrucken
 d <- c(a, b, a+b)
 print(d)
-#set.seed(19819)
+set.seed(19819)
 df <- data.frame(a=1:5, b=rnorm(5, 0, 1))
 print(df)
-
+search()
 ```	 
 - Live Demo: colSums, rowSums, lapply, function, plot, hist, boxplot, factor,
   str, head, names, ...
@@ -132,6 +134,8 @@ names(mydata)
 - Demo: Anwendung der Methoden auf `mydata`
 ```r
 class(mydata)
+library(dplyr)
+
 
 ```
 
