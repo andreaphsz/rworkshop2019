@@ -132,9 +132,27 @@ names(mydata)
 | `merge` | `left_join`|
 
 - Demo: Anwendung der Methoden auf `mydata`
+
 ```r
 class(mydata)
 library(dplyr)
+
+mydata$b
+mydata[,2]
+mydata[,2, drop=FALSE]
+
+mydata %>% select(b)
+
+mydata[mydata$b>1,]
+mydata %>% filter(b>1)
+
+mydata$d <- mydata$b + 1
+
+mydata %>% mutate(d=b+1)
+
+aggregate(mydata$b, by=list(mydata$g), mean)
+
+mydata %>% group_by(g) %>% summarise(m=mean(b))
 
 
 ```
