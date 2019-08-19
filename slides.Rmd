@@ -133,7 +133,7 @@ names(mydata)
 
 - Demo: Anwendung der Methoden auf `mydata`
 
-```r
+```{r}
 class(mydata)
 library(dplyr)
 
@@ -181,7 +181,7 @@ https://andreaphsz.github.io/rworkshop2019/pisa2012che.xlsx
 - Einlesen der `pisa2012che.sav` SPSS-Datei mit dem `haven` Package  
 https://cran.r-project.org/package=haven
 
-```r
+```{r}
 
 library(haven)
 pisa.sav <- read_sav("pisa2012che.sav")
@@ -191,7 +191,7 @@ pisa.sav <- read_sav("pisa2012che.sav")
 - Einlesen der `pisa2012che.xlsx` Excel-Datei mit dem `readxl` Package  
 https://cran.r-project.org/package=readxl
 
-```r
+```{r}
 
 library(readxl)
 pisa.xlsx <- read_xlsx("pisa2012che.xlsx")
@@ -201,7 +201,7 @@ pisa.xlsx <- read_xlsx("pisa2012che.xlsx")
 - Codebook erstellen mit dem `codebook` Package  
 https://cran.r-project.org/package=codebook
 
-```r
+```{r}
 
 library(codebook)
 new_codebook_rmd()
@@ -214,7 +214,7 @@ new_codebook_rmd()
 - `anova`, `lm`, `summary`
 - Berechnungen mit dem `pisa2012che` Datensatz
 
-```r
+```{r}
 
 fit <- lm(MATH ~ ST04Q01, pisa.sav)
 summary(fit)
@@ -275,6 +275,7 @@ ggplot(pisa.xlsx) +
  theme_gray()
 
 ```
+
 ## Nützliche Links
 - [R Project](https://www.r-project.org/)
 - [rseek.org](https://rseek.org/)
