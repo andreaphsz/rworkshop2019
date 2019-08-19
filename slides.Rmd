@@ -137,22 +137,21 @@ names(mydata)
 class(mydata)
 library(dplyr)
 
-# select
+# select spalten
 mydata$b
 mydata[,2]
 mydata[,2, drop=FALSE]
-
 mydata %>% select(b)
 
-# filter
+# filter zeilen
 mydata[mydata$b>1,]
 mydata %>% filter(b>1)
 
-# mutate
+# mutate spalte
 mydata$d <- mydata$b + 1
 mydata %>% mutate(d=b+1)
 
-# aggregate
+# aggregate by group
 aggregate(mydata$b, by=list(mydata$g), mean)
 mydata %>% group_by(g) %>% summarise(m=mean(b))
 
