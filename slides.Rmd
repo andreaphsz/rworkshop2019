@@ -137,23 +137,27 @@ names(mydata)
 class(mydata)
 library(dplyr)
 
+# select
 mydata$b
 mydata[,2]
 mydata[,2, drop=FALSE]
 
 mydata %>% select(b)
 
+# filter
 mydata[mydata$b>1,]
 mydata %>% filter(b>1)
 
+# mutate
 mydata$d <- mydata$b + 1
-
 mydata %>% mutate(d=b+1)
 
+# aggregate
 aggregate(mydata$b, by=list(mydata$g), mean)
-
 mydata %>% group_by(g) %>% summarise(m=mean(b))
 
+# (kreuz)tabelle
+table(mydata$g) 
 
 ```
 
